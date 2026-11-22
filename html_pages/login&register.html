@@ -1,90 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <base href="https://shreddedtogether.vercel.app/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and register form</title>
-    <link rel="stylesheet" href="/css/login&register.css">
-    <link rel="stylesheet" href="/css/navbar.css">
-</head>
-
-<body>
-    <header>
-        <div class="container"> 
-            <a class="logo" href="/html_pages/landing_page.html">
-                <img src="/gym_web_app_photos/logo.png" alt="logo">
-            </a>
-            <nav>
-                <div class="menu-icon">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <ul class="nav-menu">
-                    <li>
-                        <a href="/html_pages/locations.html">Locations</a>
-                    </li>
-                    <li>
-                        <a href="/html_pages/memberships.html">Memberships</a>
-                    </li>
-                    <li>
-                        <a href="/html_pages/activities&events.html">Activities and events</a>
-                    </li>
-                    <li>
-                        <a href="/html_pages/login&register.html">Create a profile</a>
-                    </li>
-                </ul>
-            </nav>
-            
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Member access | Shredded Together</title>
+    <meta
+      name="description"
+      content="Sign in to manage your membership or create your account."
+    />
+    <link rel="icon" href="/gym_web_app_photos/logo.png" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <script type="module" src="/js/site.js"></script>
+  </head>
+  <body data-page="auth">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="/" aria-label="Shredded Together home"
+          ><span class="brand-symbol" aria-hidden="true">Ⅲ</span
+          ><span>SHREDDED<br />TOGETHER</span></a
+        ><button
+          class="menu-toggle plain"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu ☰
+        </button>
+        <nav id="main-nav" aria-label="Main">
+          <a href="/html_pages/locations.html">Locations</a
+          ><a href="/html_pages/memberships.html"
+            ><img
+              class="nav-icon"
+              src="/gym_web_app_photos/dumbbell-solid.svg"
+              alt=""
+            />Memberships</a
+          ><a href="/html_pages/activities&amp;events.html">Events</a
+          ><a href="/html_pages/schedule.html"
+            ><img
+              class="nav-icon"
+              src="/gym_web_app_photos/calendar-days-solid.svg"
+              alt=""
+            />Schedule</a
+          ><a class="account-link" href="/html_pages/user_profile.html"
+            >My profile <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
     </header>
-    
-    <div class="main-container border">
-        <div class="inner-container">
-            <div class="labels">
-                <label onclick="showForm('login-form')">Login</label>
-                |
-                <label onclick="showForm('register-form')">Register</label>
-            </div>
-
-
-            <form id="login-form" class="form show">
-                <label for="login-email">Email:</label>
-                <input type="text" id="login-email" name="email">
-                <br>
-                <label for="login-password">Password:</label>
-                <input type="password" id="login-password" name="password">
-                <br>
-                <input type="submit" value="Login">
-
-                <div class="show-pass-container">
-                    <label for="show-pass">Show password</label>
-                    <input type="checkbox" id="show-pass">
-                </div>
-
-            </form>
-
-            <form id="register-form" class="form">
-                <label for="register-email">Email:</label>
-                <input type="email" id="register-email" name="email">
-                <br>
-                <label for="register-password">Password:</label>
-                <input type="password" id="register-password" name="password">
-                <br>
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password">
-                <br>
-                <input type="submit" value="Register">
-
-                <div class="show-pass-container">
-                    <label for="show-pass-register">Show password</label>
-                    <input type="checkbox" id="show-pass-register">
-                </div>
-            </form>
+    <main id="main" class="">
+      <div class="page-heading">
+        <h1>Member access</h1>
+        <p>Sign in to manage your membership or create your account.</p>
+      </div>
+      <div id="workspace" aria-busy="true"><p>Loading…</p></div>
+      <p id="notice" role="status" aria-live="polite"></p>
+    </main>
+    <footer>
+      <div class="foot-inner">
+        <a class="brand" href="/" aria-label="Shredded Together home"
+          ><span class="brand-symbol" aria-hidden="true">Ⅲ</span
+          ><span>SHREDDED<br />TOGETHER</span></a
+        >
+        <div class="footer-links">
+          <a href="/html_pages/frequently_asked_questions.html">FAQ</a
+          ><a href="/html_pages/gym_ethics.html">Club etiquette</a
+          ><a href="/html_pages/multisport.html">MultiSport</a
+          ><a href="/html_pages/legal_documents.html">Member information</a>
         </div>
-    </div>
-
-    <script src="/js/login&register.js"></script>
-</body>
-
+      </div>
+    </footer>
+  </body>
 </html>

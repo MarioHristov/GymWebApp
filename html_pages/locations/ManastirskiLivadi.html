@@ -1,24 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <base href="https://shreddedtogether.vercel.app/">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/navbar.css">
-  <link rel="stylesheet" href="/css/footer.css">
-  <link rel="stylesheet" href="/css/location_style.css">
-  <script src="/js/common.js"> </script>
-  <title>Manastirski Livadi</title>
-</head>
-
-<body onload="callFunctions(includeLayout, includeNavBar, includeFooter)">
-
-  <div id="navbar-container"></div>
-  <div id="layout-container"></div>
-  <div id="footer-container"></div>
-  
-  <script src="/js/include_layout.js"> </script>
-</body>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Manastirski Livadi fitness club | Shredded Together</title>
+    <meta
+      name="description"
+      content="A quiet studio combining guided movement and recovery."
+    />
+    <link rel="icon" href="/gym_web_app_photos/logo.png" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <script type="module" src="/js/site.js"></script>
+  </head>
+  <body data-page="club" data-club="ManastirskiLivadi">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="/" aria-label="Shredded Together home"
+          ><span class="brand-symbol" aria-hidden="true">Ⅲ</span
+          ><span>SHREDDED<br />TOGETHER</span></a
+        ><button
+          class="menu-toggle plain"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu ☰
+        </button>
+        <nav id="main-nav" aria-label="Main">
+          <a href="/html_pages/locations.html">Locations</a
+          ><a href="/html_pages/memberships.html"
+            ><img
+              class="nav-icon"
+              src="/gym_web_app_photos/dumbbell-solid.svg"
+              alt=""
+            />Memberships</a
+          ><a href="/html_pages/activities&amp;events.html">Events</a
+          ><a href="/html_pages/schedule.html"
+            ><img
+              class="nav-icon"
+              src="/gym_web_app_photos/calendar-days-solid.svg"
+              alt=""
+            />Schedule</a
+          ><a class="account-link" href="/html_pages/user_profile.html"
+            >My profile <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="">
+      <a class="back" href="/html_pages/locations.html">← All clubs</a>
+      <div
+        class="club-cover"
+        style="
+          --club-image: url('/gym_web_app_photos/image_gallery/gym_image_12.png');
+        "
+      >
+        <div>
+          <p>Sofia fitness club</p>
+          <h1 id="club-name">Manastirski Livadi</h1>
+        </div>
+      </div>
+      <p class="lead" id="club-about">
+        A quiet studio combining guided movement and recovery.
+      </p>
+      <p class="fine">Sample club details and coaching timetable.</p>
+      <section class="section">
+        <h2>Club information</h2>
+        <div class="cards">
+          <article>
+            <h3>Address</h3>
+            <p id="club-address">16 Todor Kableshkov St, Sofia</p>
+          </article>
+          <article>
+            <h3>Opening hours</h3>
+            <p id="club-hours">Weekdays 07:00-22:00 � Weekends 09:00-19:00</p>
+          </article>
+          <article>
+            <h3>Facilities</h3>
+            <p id="club-facilities">Yoga studio · Lockers · Wi-Fi</p>
+          </article>
+        </div>
+        <div class="actions">
+          <a
+            class="button"
+            href="/html_pages/schedule.html?club=ManastirskiLivadi"
+            >Club schedule</a
+          ><a class="button secondary" href="/html_pages/memberships.html"
+            >Membership prices</a
+          ><a class="text-link" href="mailto:info@shreddedtogether.bg"
+            >Contact the club</a
+          >
+        </div>
+      </section>
+      <section class="section">
+        <h2>Gallery</h2>
+        <div class="tiles gallery">
+          <img
+            loading="lazy"
+            src="/gym_web_app_photos/image_gallery/gym_image_1.png"
+            alt="Gym interior, shared club gallery photo 1"
+          /><img
+            loading="lazy"
+            src="/gym_web_app_photos/image_gallery/gym_image_3.png"
+            alt="Gym interior, shared club gallery photo 2"
+          /><img
+            loading="lazy"
+            src="/gym_web_app_photos/image_gallery/gym_image_5.png"
+            alt="Gym interior, shared club gallery photo 3"
+          />
+        </div>
+      </section>
+      <section class="section">
+        <h2>Group activities</h2>
+        <p id="club-activities">Evening flow</p>
+      </section>
+      <section class="section">
+        <h2>Trainers</h2>
+        <div id="club-team">
+          <article class="trainer">
+            <div>
+              <h3>Alex Marinov</h3>
+              <p>Yoga</p>
+            </div>
+            <a
+              class="text-link"
+              href="/html_pages/schedule.html?trainer=alex-marinov"
+              >View schedule →</a
+            >
+          </article>
+        </div>
+      </section>
+      <p id="notice" role="status" aria-live="polite"></p>
+    </main>
+    <footer>
+      <div class="foot-inner">
+        <a class="brand" href="/" aria-label="Shredded Together home"
+          ><span class="brand-symbol" aria-hidden="true">Ⅲ</span
+          ><span>SHREDDED<br />TOGETHER</span></a
+        >
+        <div class="footer-links">
+          <a href="/html_pages/frequently_asked_questions.html">FAQ</a
+          ><a href="/html_pages/gym_ethics.html">Club etiquette</a
+          ><a href="/html_pages/multisport.html">MultiSport</a
+          ><a href="/html_pages/legal_documents.html">Member information</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

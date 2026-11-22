@@ -1,181 +1,89 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <base href="https://shreddedtogether.vercel.app/">
-  <title>Add Map</title>
-  <link rel="stylesheet" href="/css/locations.css" />
-  <link rel="stylesheet" href="/css/navbar.css">
-  <link rel="stylesheet" href="/css/footer.css">
-  <script src="/js/common.js"> </script>
-</head>
-
-<body onload="callFunctions(includeNavBar, includeFooter)">
-
-  <div id="navbar-container"></div>
-  <div class="map-container" id="map"></div>
-
-  <div class="locations-container">
-    <h1>Shredded Together clubs</h1>
-    <div class="actual-locations">
-
-      <div class="location">
-        <div>
-          <h2>Peyo Yavorov</h2>
-        </div>
-        <div class="body-container">
-          <div class="location-details">
-            <p>
-              Address
-              <br>
-              Number: <span>+359 000 000 000</span>
-            </p>
-          </div>
-
-          <div class="working-hours">
-            <p>Working hours</p>
-          </div>
-          <div class="buttons">
-            <a href="/html_pages/activities&events.html?id=PeyoYavorov">Schedule</a>
-            <br>
-            <a href="/html_pages/locations/PeyoYavorov.html">More</a>
-          </div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Our clubs | Shredded Together</title>
+    <meta
+      name="description"
+      content="Explore six gyms across Sofia by club name or street address."
+    />
+    <link rel="icon" href="/gym_web_app_photos/logo.png" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <script type="module" src="/js/site.js"></script>
+  </head>
+  <body data-page="locations">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="/" aria-label="Shredded Together home"
+          ><span class="brand-symbol" aria-hidden="true">Ⅲ</span
+          ><span>SHREDDED<br />TOGETHER</span></a
+        ><button
+          class="menu-toggle plain"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu ☰
+        </button>
+        <nav id="main-nav" aria-label="Main">
+          <a href="/html_pages/locations.html">Locations</a
+          ><a href="/html_pages/memberships.html"
+            ><img
+              class="nav-icon"
+              src="/gym_web_app_photos/dumbbell-solid.svg"
+              alt=""
+            />Memberships</a
+          ><a href="/html_pages/activities&amp;events.html">Events</a
+          ><a href="/html_pages/schedule.html"
+            ><img
+              class="nav-icon"
+              src="/gym_web_app_photos/calendar-days-solid.svg"
+              alt=""
+            />Schedule</a
+          ><a class="account-link" href="/html_pages/user_profile.html"
+            >My profile <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="">
+      <div class="page-heading">
+        <h1>Our clubs</h1>
+        <p>Explore six gyms across Sofia by club name or street address.</p>
+      </div>
+      <div class="bar">
+        <label
+          >Search clubs<input
+            type="search"
+            id="search"
+            placeholder="Club name or street address"
+        /></label>
+        <div class="switch" aria-label="Location view">
+          <button id="list" aria-pressed="true">List</button
+          ><button id="map" aria-pressed="false">Map</button>
         </div>
       </div>
-
-      <div class="location">
-        <div>
-          <h2>Dry River</h2>
-        </div>
-        <div class="body-container">
-          <div class="location-details">
-            <p>
-              Address
-              <br>
-              <span>+359 000 000 000</span>
-            </p>
-          </div>
-
-          <div class="working-hours">
-            <p>Working hours</p>
-          </div>
-
-          <div class="buttons">
-            <a href="/html_pages/activities&events.html?id=DryRiver">Schedule</a>
-            <br>
-            <a href="/html_pages/locations/DryRiver.html">More</a>
-          </div>
+      <p class="fine">
+        Club addresses, facilities and hours are sample listings.
+      </p>
+      <div id="map-canvas" aria-label="Interactive club map" hidden></div>
+      <div id="workspace" aria-busy="true"><p>Loading…</p></div>
+      <p id="notice" role="status" aria-live="polite"></p>
+    </main>
+    <footer>
+      <div class="foot-inner">
+        <a class="brand" href="/" aria-label="Shredded Together home"
+          ><span class="brand-symbol" aria-hidden="true">Ⅲ</span
+          ><span>SHREDDED<br />TOGETHER</span></a
+        >
+        <div class="footer-links">
+          <a href="/html_pages/frequently_asked_questions.html">FAQ</a
+          ><a href="/html_pages/gym_ethics.html">Club etiquette</a
+          ><a href="/html_pages/multisport.html">MultiSport</a
+          ><a href="/html_pages/legal_documents.html">Member information</a>
         </div>
       </div>
-
-      <div class="location">
-        <div>
-          <h2>NDK</h2>
-        </div>
-        <div class="body-container">
-          <div class="location-details">
-            <p>
-              Address
-              <br>
-              <span>+359 000 000 000</span>
-            </p>
-          </div>
-
-          <div class="working-hours">
-            <p>Working hours</p>
-          </div>
-
-          <div class="buttons">
-            <a href="/html_pages/activities&events.html?id=NDK">Schedule</a>
-            <br>
-            <a href="/html_pages/locations/NDK.html">More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="location">
-        <div>
-          <h2>Mladost</h2>
-        </div>
-        <div class="body-container">
-          <div class="location-details">
-            <p>
-              Address
-              <br>
-              <span>+359 000 000 000</span>
-            </p>
-          </div>
-
-          <div class="working-hours">
-            <p>Working hours</p>
-          </div>
-
-          <div class="buttons">
-            <a href="/html_pages/activities&events.html?id=Mladost">Schedule</a>
-            <br>
-            <a href="/html_pages/locations/Mladost.html">More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="location">
-        <div>
-          <h2>Lulin</h2>
-        </div>
-        <div class="body-container">
-          <div class="location-details">
-            <p>
-              Address
-              <br>
-              <span>+359 000 000 000</span>
-            </p>
-          </div>
-
-          <div class="working-hours">
-            <p>Working hours</p>
-          </div>
-          <div class="buttons">
-            <a href="/html_pages/activities&events.html?id=Lulin">Schedule</a>
-            <br>
-            <a href="/html_pages/locations/Lulin.html">More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="location">
-        <div>
-          <h2>Manastirski Livadi</h2>
-        </div>
-        <div class="body-container">
-          <div class="location-details">
-            <p>
-              Address
-              <br>
-              <span>+359 000 000 000</span>
-            </p>
-          </div>
-
-          <div class="working-hours">
-            <p>Working hours</p>
-          </div>
-
-          <div class="buttons">
-            <a href="/html_pages/activities&events.html?id=ManastirskiLivadi">Schedule</a>
-            <br>
-            <a href="/html_pages/locations/ManastirskiLivadi.html">More</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div id="footer-container"></div>
-  
-  <script src="/js/include_layout.js"> </script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVmN3B12P9r5G3wlAiZimjij-gWkSnOps&libraries=places,geometry,visualization&callback=initMap"
-    async defer></script>
-  <script src="/js/locations.js"></script>
-</body>
-
+    </footer>
+  </body>
 </html>

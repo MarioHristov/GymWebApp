@@ -1,58 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <base href="https://shreddedtogether.vercel.app/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym ethics</title>
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/gym_ethics.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <script src="/js/common.js"> </script>
-</head>
-
-<body onload="callFunctions(includeNavBar, includeFooter)">
-
-    <div id="navbar-container"></div>
-    <div class="ethics-container">
-        <h1>Our ethics</h1>
-        <h2>How to be a good gym bro/gal!</h2>
-        <ol>
-            <li>
-                Always use clean outfit when training.
-            </li>
-            <li>
-                Say NO to dirty shoes. Always wear clean shoes!
-            </li>
-            <li>
-                If you want to be an extra clean boy/gal, bring towel with you when training.
-            </li>
-            <li>
-                Always put your equipment back into it's place. Your parents will be proud of you.
-            </li>
-            <li>
-                Don't be a gym douchebag, always treat everyone with respect and don't yank the machines.
-            </li>
-            <li>
-                Don't sleep on the equipment, there may be someone who wants to use it.
-            </li>
-            <li>
-                Always ask if equipment you want to use is free.
-            </li>
-            <li>
-                Don't hog multiple machines at the same time, be considerate.
-            </li>
-            <li>
-                Keep the gym clean, treat it like your second home.
-            </li>
-        </ol>
-    </div>
-    <p>&nbsp;</p>
-
-    <div id="footer-container"></div>
-
-    <script src="/js/include_layout.js"> </script>
-</body>
-
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Club etiquette | Shredded Together</title>
+    <meta
+      name="description"
+      content="Shared rules for a comfortable training space."
+    />
+    <link rel="icon" href="/gym_web_app_photos/logo.png" />
+    <link rel="stylesheet" href="/css/site.css" />
+    <script type="module" src="/js/site.js"></script>
+  </head>
+  <body data-page="info">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="/" aria-label="Shredded Together home"
+          ><span class="brand-symbol" aria-hidden="true">Ⅲ</span
+          ><span>SHREDDED<br />TOGETHER</span></a
+        ><button
+          class="menu-toggle plain"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          Menu ☰
+        </button>
+        <nav id="main-nav" aria-label="Main">
+          <a href="/html_pages/locations.html">Locations</a
+          ><a href="/html_pages/memberships.html"
+            ><img
+              class="nav-icon"
+              src="/gym_web_app_photos/dumbbell-solid.svg"
+              alt=""
+            />Memberships</a
+          ><a href="/html_pages/activities&amp;events.html">Events</a
+          ><a href="/html_pages/schedule.html"
+            ><img
+              class="nav-icon"
+              src="/gym_web_app_photos/calendar-days-solid.svg"
+              alt=""
+            />Schedule</a
+          ><a class="account-link" href="/html_pages/user_profile.html"
+            >My profile <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="">
+      <div class="page-heading">
+        <h1>Club etiquette</h1>
+        <p>Shared rules for a comfortable training space.</p>
+      </div>
+      <div class="reading">
+        <section class="section">
+          <h2>On the gym floor</h2>
+          <p>
+            Wear clean training clothes and indoor shoes, use a towel and wipe
+            down equipment.
+          </p>
+        </section>
+        <section class="section">
+          <h2>Sharing equipment</h2>
+          <p>
+            Return weights after use, ask before sharing a station, and leave
+            room for other members.
+          </p>
+        </section>
+      </div>
+      <p id="notice" role="status" aria-live="polite"></p>
+    </main>
+    <footer>
+      <div class="foot-inner">
+        <a class="brand" href="/" aria-label="Shredded Together home"
+          ><span class="brand-symbol" aria-hidden="true">Ⅲ</span
+          ><span>SHREDDED<br />TOGETHER</span></a
+        >
+        <div class="footer-links">
+          <a href="/html_pages/frequently_asked_questions.html">FAQ</a
+          ><a href="/html_pages/gym_ethics.html">Club etiquette</a
+          ><a href="/html_pages/multisport.html">MultiSport</a
+          ><a href="/html_pages/legal_documents.html">Member information</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

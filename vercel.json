@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/html_pages/landing_page.html"
+      "source": "/api/:path*",
+      "destination": "https://gymwebapi.azurewebsites.net/api/:path*"
     }
   ]
 }
